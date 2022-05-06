@@ -12,6 +12,8 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ListView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.parkingspot.adapter.ItemAdapter
+import com.example.parkingspot.data.Datasource
 import com.example.parkingspot.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +26,11 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val myDataset = Datasource().loadChapterContent()
+        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
+        recyclerView.adapter = ItemAdapter(this, myDataset)
+        recyclerView.setHasFixedSize(true)
 
         setSupportActionBar(binding.toolbar)
 
@@ -41,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                     .setAction("Action", null)
                     .show()
         })
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
