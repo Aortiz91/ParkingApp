@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Parking App</string>
+    <string name="add_reservation">Add_reservation</string>
 </resources>
