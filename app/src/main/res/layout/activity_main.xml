@@ -5,6 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:max="30"
+        android:progress="12"
+        android:scaleY="3"
+        android:progressBackgroundTint="@color/progress_free"
+        android:progressTint="@color/progress_busy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/rectangle"
+        />
 
       <com.google.android.material.floatingactionbutton.FloatingActionButton
           android:id="@+id/fab"
@@ -23,24 +41,7 @@
           app:layout_constraintEnd_toEndOf="parent" />
 
 
-          <ProgressBar
-              android:id="@+id/progressBar"
-              style="?android:attr/progressBarStyleHorizontal"
-              android:layout_width="match_parent"
-              android:layout_height="83dp"
-              android:layout_marginStart="@dimen/margin16"
-              android:layout_marginEnd="@dimen/margin16"
-              android:max="30"
-              android:progress="12"
-              android:scaleY="3"
-              android:progressBackgroundTint="@color/progress_free"
-              android:progressTint="@color/progress_busy"
-              app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintHorizontal_bias="0.0"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintTop_toTopOf="parent"
-              android:elevation="@dimen/margin16"
-              />
+
 
         <TextView
             android:id="@+id/busy"
@@ -70,13 +71,13 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/main_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/progressBar"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
