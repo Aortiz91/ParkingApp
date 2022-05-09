@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="83dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
         android:max="30"
         android:progress="12"
         android:scaleY="3"
@@ -48,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="49dp"
+
             android:fontFamily="@font/inter_semibold"
             android:text="@string/busy"
             android:textColor="@color/progress_text"
@@ -59,6 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/free"
+
             app:layout_constraintEnd_toEndOf="@id/progressBar"
             app:layout_constraintTop_toTopOf="@id/progressBar"
             android:layout_marginTop="49dp"
