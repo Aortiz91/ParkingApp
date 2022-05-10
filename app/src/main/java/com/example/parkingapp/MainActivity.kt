@@ -14,13 +14,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initRecyclerView()
-
-        //Floating Action Button
-        val fab: View = findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Snackbar!!", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
     }
 
     private fun initRecyclerView() {
@@ -28,5 +21,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = LotAdapter(LotDataList.listOfLots(30))
     }
+
 
 }

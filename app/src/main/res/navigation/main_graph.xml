@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_lotDetailsFragment"
             app:destination="@id/lotDetailsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addReservationFragment"
+            app:destination="@id/addReservationFragment" />
     </fragment>
     <fragment
         android:id="@+id/lotDetailsFragment"
