@@ -2,10 +2,9 @@ package com.example.parkingapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
+import com.example.parkingapp.adapters.MainAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private fun initRecyclerView() {
         val recyclerView = findViewById<RecyclerView>(R.id.main_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = LotAdapter(LotDataList.listOfLots(30))
+        recyclerView.adapter = MainAdapter(LotDataList.listOfLots(30))
     }
 
 

@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/lotDetailsFragment"
-        android:name="com.example.parkingapp.LotDetailsFragment"
+        android:name="com.example.parkingapp.fragments.LotDetailsFragment"
         android:label="fragment_lot_details"
         tools:layout="@layout/fragment_lot_details" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/addReservationFragment"
-        android:name="com.example.parkingapp.AddReservationFragment"
+        android:name="com.example.parkingapp.fragments.AddReservationFragment"
         android:label="fragment_add_reservation"
         tools:layout="@layout/fragment_add_reservation" />
 </navigation>

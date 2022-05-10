@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainFragment"
+    tools:context=".MainActivity"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -51,9 +51,6 @@
         app:borderWidth="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
-
 
     <TextView
         android:id="@+id/busy"
