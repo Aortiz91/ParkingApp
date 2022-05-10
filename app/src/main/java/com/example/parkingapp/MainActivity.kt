@@ -2,19 +2,24 @@ package com.example.parkingapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import com.example.parkingapp.R
-import com.google.android.material.snackbar.Snackbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.parkingapp.adapters.MainAdapter
 
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val fab: View = findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Snackbar!!", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+        initRecyclerView()
     }
+
+    private fun initRecyclerView() {
+        val recyclerView = findViewById<RecyclerView>(R.id.main_recycler_view)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = MainAdapter(LotDataList.listOfLots(30))
+    }
+
+
 }
