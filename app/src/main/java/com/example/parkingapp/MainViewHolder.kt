@@ -3,6 +3,7 @@ package com.example.parkingapp
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.parkingapp.dataclasses.ParkingLot
 
 class LotViewHolder (view: View): RecyclerView.ViewHolder(view){
     private val lotID = view.findViewById<TextView>(R.id.textLotID)

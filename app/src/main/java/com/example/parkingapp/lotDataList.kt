@@ -1,5 +1,7 @@
 package com.example.parkingapp
 
+import com.example.parkingapp.dataclasses.ParkingLot
+
 class LotDataList {
     companion object {
         fun listOfLots(numberOfLots: Int): List<ParkingLot> {
